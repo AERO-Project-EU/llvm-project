@@ -151,7 +151,7 @@ class WideningIntegerArithmetic : public FunctionPass {
     SolutionSet visitDROP_EXT(Instruction *Instr);
     SolutionSet visitDROP_TRUNC(Instruction *Instr);
     SolutionSet visitEXTLO(Instruction *Instr);
-    SolutionSet visitSUBSUME_FILL(Instruction *Instr);
+    SolutionSet visitSUBSUME_FILL_v2(Instruction *Instr);
     SolutionSet visitSUBSUME_INDEX(Instruction *Instr);
     SolutionSet visitNATURAL(Instruction *Instr);
     void  			visitCONSTANT(ConstantInt *CI);
@@ -1439,6 +1439,12 @@ WideningIntegerArithmetic::SolutionSet WideningIntegerArithmetic::visitEXTLO(
 }
     
 WideningIntegerArithmetic::SolutionSet WideningIntegerArithmetic::visitSUBSUME_FILL(
+                          Instruction *Instr){
+  SolutionSet Sols;
+  return Sols;
+}
+
+WideningIntegerArithmetic::SolutionSet WideningIntegerArithmetic::visitSUBSUME_FILL_v2(
                           Instruction *Instr){
   SolutionSet Sols;
   return Sols;
